@@ -1,0 +1,27 @@
+[
+{
+"dataset_name": "p_out",
+"model_name": "my_model",
+"params": {
+"hash_bucket_size": 10000000,
+"embedding_size": 25,
+"use_sqrtn_combiner": true,
+"clip_gradients": false,
+"learning_rate": 1.0,
+"decay_rate": 0.98,
+"decay_steps": 100000,
+"hidden_layer_sizes": [25],
+"dropout_keep_prob": 1.0
+},
+"target": {
+"metric_key": "loss",
+"flip_sign_of_metric": true,
+"end_if_slope_less_than": 0.0,
+"epochs_to_avg_over": 10,
+"test_after_epochs": 1
+},
+"batch_size": 32,
+"train_sets": ["train"],
+"test_sets": ["dev", "test"]
+}
+]
