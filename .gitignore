@@ -1,0 +1,12 @@
+20210604_TFR/
+backup_script/
+BERT/
+disambiguator/
+fastSense_training_env/
+final_models/
+models/
+__pycache__/
+test_training_TFR/
+cuda.txt
+.idea/
+.ipynb_checkpoints/
