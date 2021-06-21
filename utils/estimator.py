@@ -33,24 +33,26 @@ def _parse_example(serialized_examples):
 
 
 def file_input_fn(file_pattern: str, epochs: int, batch_size: int, shuffle: bool = True):
-	files = tf.data.Dataset.list_files(file_pattern=file_pattern)
+	files = tf.data.Dataset.list_files(file_pattern=file_pattern) #A dataset of all files matching one or more glob patterns.
+
+
 	if shuffle:
 		files = files.shuffle(1000)
 	files = files.repeat(epochs)
 
 	dataset = files.interleave(
-		lambda f: tf.data.TFRecordDataset(f, compression_type="GZIP"),
+		lambda f: tf.data.TFRecordDataset(f, compression_type="GZIP"), #loads TFRecords from gzip files as bytes, does not do any decoding or parsing on its own. Parsing and Decoding is done with dataset.map functionality
 		cycle_length=32,
 		block_length=4
 	)
 	if shuffle:
 		dataset = dataset.shuffle(100000)
 	dataset = dataset.batch(batch_size=batch_size)
-	dataset = dataset.map(_parse_example, num_parallel_calls=8).prefetch(512)
+	dataset = dataset.map(_parse_example, num_parallel_calls=8).prefetch(512) #parses the TFRecords in the dataset
 
-	dataset_iterator = tf.compat.v1.data.make_one_shot_iterator(dataset)
+	dataset_iterator = tf.compat.v1.data.make_one_shot_iterator(dataset) #Creates an iterator for elements of dataset
 
-	t_indices, t_values, t_dense_shape, ps_indices, ps_values, ps_dense_shape, sense = dataset_iterator.get_next()
+	t_indices, t_values, t_dense_shape, ps_indices, ps_values, ps_dense_shape, sense = dataset_iterator.get_next() #returns the next element, which is the return value of the _parse_examples function
 
 	features = {
 		"tokens_indices": t_indices,
@@ -94,7 +96,7 @@ def _model_fn(features, labels, mode, params, config):
 
 	prev_layer_size = embedding_size
 
-	for layer_index in range(len(hidden_layer_sizes)):
+	for layer_index in range(len(hidden_layer_sizes)): #possibility to add custom layers between input and output
 		hidden_layer_size = hidden_layer_sizes[layer_index]
 
 		with tf.compat.v1.variable_scope("layer{:d}_".format(layer_index + 1)):
