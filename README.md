@@ -8,7 +8,7 @@
 
 
 ## General Info
-This package trains a word sense classifier from the data that is generate with the algorithm from [https://github.com/AndreasPadProbst/fastSense_CreateData](https://github.com/AndreasPadProbst/fastSense_CreateData).
+This package trains a word sense classifier from the data that is generated with the algorithm from [https://github.com/AndreasPadProbst/fastSense_CreateData](https://github.com/AndreasPadProbst/fastSense_CreateData).
 The main structure of this code is taken from [https://github.com/texttechnologylab/fastSense](https://github.com/texttechnologylab/fastSense) (accessed: 20.02.2021) and modified to be able to process
 the German version of the Wikipedia. [https://github.com/texttechnologylab/fastSense](https://github.com/texttechnologylab/fastSense) is a model based on fastSense (see [paper](https://www.aclweb.org/anthology/L18-1168/)).
 
