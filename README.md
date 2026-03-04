@@ -34,7 +34,6 @@ python cli_train.py --data ./training_data --models_dir ./saved_model --final_ m
 
 # Thesis Findings: Influence of Word Sense Disambiguation on Legal Information Retrieval
 
-## Summary of Chapters 3–5
 
 **Author:** Andreas Probst | **Institution:** Technical University of Munich | **Thesis Type:** Master's Thesis (CSE)
 
@@ -44,6 +43,7 @@ python cli_train.py --data ./training_data --models_dir ./saved_model --final_ m
 * [Implementation](#implementation)
 * [Quantitative Evaluation](#quantitative-evaluation)
 ---
+<br />
 
 ## Preparation and Resources
 
