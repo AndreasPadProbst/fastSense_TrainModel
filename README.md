@@ -35,9 +35,14 @@ python cli_train.py --data ./training_data --models_dir ./saved_model --final_ m
 
 **Author:** Andreas Probst | **Institution:** Technical University of Munich | **Thesis Type:** Master's Thesis (CSE)
 
+## Table of contents
+
+* [Preparation and Resources](#preparation-and-resources)
+* [Implementation](#implementation)
+* [Quantitative Evaluation](#quantitative-evaluation)
 ---
 
-## Chapter 3: Preparation and Resources
+## Preparation and Resources
 
 ### Expert Interviews
 
@@ -61,7 +66,7 @@ Since no sense-labelled German legal dataset was publicly available, a test set 
 
 ---
 
-## Chapter 4: Implementation
+## Implementation
 
 ### Key Idea
 
@@ -85,7 +90,7 @@ Two architectures were implemented and evaluated:
 
 ---
 
-## Chapter 5: Quantitative Evaluation
+## Quantitative Evaluation
 
 ### Evaluation Metrics
 
