@@ -30,7 +30,7 @@ python cli_train.py --data ./training_data --models_dir ./saved_model --final_ m
 ```
 \
 \
-\
+
 
 # Thesis Findings: Influence of Word Sense Disambiguation on Legal Information Retrieval
 
