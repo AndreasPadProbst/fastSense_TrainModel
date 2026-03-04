@@ -27,9 +27,8 @@ To train the model, the cli_train.py script needs to me executed with the follow
 ## Code Example
 ```
 python cli_train.py --data ./training_data --models_dir ./saved_model --final_ models_dir ./final_model_output --data ./train_jobs.json
-```
-\
-\
+```\
+
 
 
 # Thesis Findings: Influence of Word Sense Disambiguation on Legal Information Retrieval
